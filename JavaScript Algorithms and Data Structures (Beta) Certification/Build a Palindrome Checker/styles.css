@@ -1,0 +1,75 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #0a0a23;
+	font-size: 16px;
+	font-family: "Roboto Mono", sans-serif;
+}
+
+#container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+}
+
+.logo {
+	width: 300px;
+}
+
+.main--header {
+	color: #fff;
+	font-size: 2.5rem;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#palindrome-container {
+	width: 500px;
+	height: 150px;
+	border-radius: 10px;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+    flex-direction: column;
+}
+
+#text-input {
+	border: none;
+	border-bottom: 2px solid #5a01a7;
+	width: 250px;
+    height: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#check-btn {
+	width: 120px;
+	height: 40px;
+	border-radius: 10px;
+	border: none;
+	background-color: #5a01a7;
+	color: #fff;
+    cursor: pointer;
+}
+
+#tip {
+	width: min(100vw, 500px);
+	font-size: 1.3rem;
+	min-height: 140px;
+	background-color: #00471b;
+	margin-top: 20px;
+	padding: 20px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
