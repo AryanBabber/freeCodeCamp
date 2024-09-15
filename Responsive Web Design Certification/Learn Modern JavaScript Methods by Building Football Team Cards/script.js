@@ -210,26 +210,26 @@ playersDropdownList.addEventListener("change", (e) => {
 			);
 			break;
 
-        case "midfielder":
-            setPlayerCards(
-                players.filter((player) => player.position === "midfielder")
-            );
-            break;
+		case "midfielder":
+			setPlayerCards(
+				players.filter((player) => player.position === "midfielder")
+			);
+			break;
 
-        case "defender":
-            setPlayerCards(
-                players.filter((player) => player.position === "defender")
-            );
-            break;
+		case "defender":
+			setPlayerCards(
+				players.filter((player) => player.position === "defender")
+			);
+			break;
 
-        case "goalkeeper":
-            setPlayerCards(
-                players.filter((player) => player.position === "goalkeeper")
-            );
-            break;
+		case "goalkeeper":
+			setPlayerCards(
+				players.filter((player) => player.position === "goalkeeper")
+			);
+			break;
 
-        default:
-            setPlayerCards();
-            break;
+		default:
+			setPlayerCards();
+			break;
 	}
 });
