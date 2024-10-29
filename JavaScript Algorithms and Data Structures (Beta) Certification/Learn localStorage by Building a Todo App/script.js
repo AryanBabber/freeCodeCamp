@@ -13,18 +13,23 @@ const descriptionInput = document.getElementById("description-input");
 const taskData = JSON.parse(localStorage.getItem("data")) || [];
 let currentTask = {};
 
+const removeSpecialChars = (val) => {
+	return val.trim().replace(/[^A-Za-z0-9\-\s]/g, "");
+};
+
 const addOrUpdateTask = () => {
 	const dataArrIndex = taskData.findIndex(
 		(item) => item.id === currentTask.id
 	);
 	const taskObj = {
-		id: `${titleInput.value
+		id: `${removeSpecialChars(titleInput.value
 			.toLowerCase()
+			
 			.split(" ")
-			.join("-")}-${Date.now()}`,
-		title: titleInput.value,
+			.join("-"))}-${Date.now()}`,
+		title: removeSpecialChars(titleInput.value),
 		date: dateInput.value,
-		description: descriptionInput.value,
+		description: removeSpecialChars(descriptionInput.value),
 	};
 
 	if (dataArrIndex === -1) {
@@ -91,7 +96,7 @@ const reset = () => {
 	currentTask = {};
 };
 
-if(taskData.length) {
+if (taskData.length) {
 	updateTaskContainer();
 }
 
